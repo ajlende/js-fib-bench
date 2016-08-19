@@ -1,0 +1,26 @@
+{
+  "name": "js-optimizations-test",
+  "version": "1.0.0",
+  "description": "Simple benchmarks on different memoization techniques",
+  "main": "run.js",
+  "scripts": {
+    "test": "node --harmony test.js",
+    "start": "node --harmony run.js"
+  },
+  "keywords": [
+    "benchmark",
+    "dynamic",
+    "programming",
+    "memoization",
+    "tail-call",
+    "optimization",
+    "fibonacci"
+  ],
+  "author": "Alex Lende",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.1",
+    "lodash": "^4.15.0",
+    "microtime": "^2.1.1"
+  }
+}
