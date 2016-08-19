@@ -2,6 +2,7 @@ var Benchmark = require('benchmark')
 var suite = new Benchmark.Suite('Fibonacci')
 
 var iterative = require('./fibonacci/iterative')
+var iterativees6 = require('./fibonacci/iterativees6')
 var recursive = require('./fibonacci/recursive')
 var tailcall = require('./fibonacci/tailcall')
 var memoized = require('./fibonacci/memoized')
@@ -16,8 +17,16 @@ suite
   iterative(fibNum)
 })
 
+.add('iterativees6', function() {
+  iterativees6(fibNum)
+})
+
 .add('recursive', function() {
   recursive(fibNum)
+})
+
+.add('composed', function() {
+  composed(fibNum)
 })
 
 .add('tailcall', function() {
@@ -26,10 +35,6 @@ suite
 
 .add('memoized', function() {
   memoized(fibNum)
-})
-
-.add('composed', function() {
-  composed(fibNum)
 })
 
 // Listeners

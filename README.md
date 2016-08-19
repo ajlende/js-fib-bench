@@ -14,6 +14,7 @@ Versions less than that will still run; however, the V8 engine won't optimize th
 
 # Implementations
 - `iterative`: An iterative approach that you probably learned in class
+- `iterativees6`: An iterative approach with an in-place swap using ES6 array destructuring assignment
 - `recursive`: The naive approach that y'all used to learn recursion
 - `tailcall`: A version that you may have seen in a functional programming class
 - `memoized`: The first dynamic programming algorithm you probably studied
@@ -24,12 +25,13 @@ These are the results from my Mid-2012 Macbook Pro
 
 ```
 $ node --harmony run.js 32
-iterative x 731,907 ops/sec ±0.94% (86 runs sampled)
-recursive x 4.63 ops/sec ±6.55% (16 runs sampled)
-tailcall x 960,622 ops/sec ±1.09% (82 runs sampled)
-memoized x 481,704 ops/sec ±1.12% (85 runs sampled)
-composed x 941,759 ops/sec ±1.33% (83 runs sampled)
-Fastest is tailcall,composed
+iterative x 726,578 ops/sec ±0.86% (85 runs sampled)
+iterativees6 x 108,391 ops/sec ±1.03% (85 runs sampled)
+recursive x 4.71 ops/sec ±6.55% (16 runs sampled)
+tailcall x 951,489 ops/sec ±1.02% (85 runs sampled)
+memoized x 481,473 ops/sec ±1.10% (85 runs sampled)
+composed x 1,001,001 ops/sec ±1.30% (84 runs sampled)
+Fastest is composed
 ```
 
-I was kind of surprised that the `tailcall` and `composed` were actually fastest. My expectation was that the `iterative` approach would still be fastest.
+I was kind of surprised that `composed` and `tailcall` were actually fastest. My expectation was that the `iterative` or `iterativees6` approach would still be fastest.

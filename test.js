@@ -1,6 +1,7 @@
 var _ = require('lodash')
 
 var iterative = require('./fibonacci/iterative')
+var iterativees6 = require('./fibonacci/iterativees6')
 var recursive = require('./fibonacci/recursive')
 var tailcall = require('./fibonacci/tailcall')
 var memoized = require('./fibonacci/memoized')
@@ -8,6 +9,7 @@ var composed = require('./fibonacci/composed')
 
 var fibs = {
   iterative,
+  iterativees6,
   recursive,
   tailcall,
   memoized,
