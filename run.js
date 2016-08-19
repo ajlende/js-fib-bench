@@ -7,6 +7,8 @@ var recursive = require('./fibonacci/recursive')
 var tailcall = require('./fibonacci/tailcall')
 var memoized = require('./fibonacci/memoized')
 var composed = require('./fibonacci/composed')
+var closedform = require('./fibonacci/closedform')
+var lookup = require('./fibonacci/lookup')
 
 var fibNum = process.argv[2] || 30 // argument for which fibonacci number to compute or default to 30
 
@@ -35,6 +37,14 @@ suite
 
 .add('memoized', function() {
   memoized(fibNum)
+})
+
+.add('closedform', function() {
+  closedform(fibNum)
+})
+
+.add('lookup', function() {
+  lookup(fibNum)
 })
 
 // Listeners

@@ -6,6 +6,8 @@ var recursive = require('./fibonacci/recursive')
 var tailcall = require('./fibonacci/tailcall')
 var memoized = require('./fibonacci/memoized')
 var composed = require('./fibonacci/composed')
+var closedform = require('./fibonacci/closedform')
+var lookup = require('./fibonacci/lookup')
 
 var fibs = {
   iterative,
@@ -14,9 +16,11 @@ var fibs = {
   tailcall,
   memoized,
   composed,
+  closedform,
+  lookup,
 }
 
-var sequence = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+var sequence = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
 
 function test(fn, sequence) {
   return _.reduce(sequence, function(result, expected, index) {
