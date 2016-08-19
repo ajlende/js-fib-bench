@@ -39,11 +39,11 @@ suite
 
 // Listeners
 .on('cycle', function(event) {
-  console.log(String(event.target));
+  console.log(String(event.target))
 })
 
 .on('complete', function(event) {
-  console.log('Fastest is ' + this.filter('fastest').map('name'));
+  console.log('Fastest is ' + this.filter('fastest').map('name'))
 })
 
 // Run
